@@ -1,0 +1,172 @@
+/* MAIN PAGE */
+.platform {
+  height: 100vh;
+  display: flex;
+}
+
+/* LEFT SIDE */
+.platform-left {
+  flex: 1;
+  padding: 100px;
+  background: linear-gradient(135deg, #ff69b4, #c2327f);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+}
+
+.hero-text-p {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* RIGHT SIDE */
+.platform-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CTA BOX */
+.cta-box {
+  text-align: center;
+  max-width: 350px;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff69b4, #c2327f);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.4);
+}
+
+/* SWITCH TEXT */
+.switch-text {
+  margin-top: 15px;
+}
+
+.switch-text span {
+  color: #c2327f;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* INPUTS */
+.input {
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  margin: 7px 0;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* REGISTER BUTTON */
+.register {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  background: #ff69b4;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register:hover {
+  background: #ff1493;
+}
+
+/* ERROR */
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* MODAL OVERLAY */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* MODAL BOX */
+.modal {
+  background: #ffb6c1;
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* LOGIN MODAL FIX */
+.login-modal {
+  width: auto;
+  padding: 0;
+  background: transparent;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  margin-top: 10px;
+  background: #333;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* SUCCESS BUTTON */
+.addBtn {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff69b4;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: #ff1493;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,118 @@
+/* DASHBOARD LAYOUT */
+.dashboard-container {
+  display: flex;
+}
+
+/* SIDEBAR (FIXED) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: linear-gradient(180deg,#ff4da6, #414245);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 15px;
+  gap: 10px;
+  box-shadow: 5px 0 20px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* MAIN CONTENT (NORMAL PAGE SCROLL) */
+.main-content {
+  margin-left: 270px; /* push content */
+  padding: 20px;
+}
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.logout-btn {
+  margin-top: auto;
+  background: #ff4d4f;
+  color: #fff;
+}
+
+.logout-btn:hover {
+  background: #e33c3c;
+}
+
+/* PRODUCTS TREE INSIDE SIDEBAR */
+.tree {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  gap: 5px;
+  padding-left: 10px;
+}
+
+.tree-category {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.tree-category:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(5px);
+}
+
+.active-cat {
+  background: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+}
+/* Dashboard Hero */
+/* DASHBOARD HERO CONTAINER */
+.dashboard-hero {
+  margin-bottom: 40px;
+  max-width: 900px;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* TITLE – Gradient + subtle glow */
+.dashboard-title {
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff69b4, #c2327f, #ff69b4);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+/* SUBTITLE – Clean professional */
+.dashboard-subtitle {
+  font-size: 17px;
+  opacity: 0.75;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+

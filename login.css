@@ -1,0 +1,195 @@
+/* MAIN CONTAINER */
+.platform {
+  height: 100vh;
+  display: flex;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+/* LEFT SIDE */
+.platform-left {
+  flex: 1;
+  padding: 80px 100px;
+  background: linear-gradient(135deg, #ff69b4, #c2327f);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* HERO TEXT */
+.hero-text {
+  max-width: 600px;
+  margin-bottom: 60px;
+}
+
+/* main title */
+.hero-text h1 {
+  font-size: 48px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #0f172a;
+  font-family: 'Pacifico', cursive;
+}
+
+/* subtitle */
+.hero-text p {
+  font-size: 26px;
+  margin-top: 10px;
+  color: #0f172a;
+  font-family: 'Pacifico', cursive;
+}
+
+/* ===== BRUSH EFFECT ===== */
+.brush-blue {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.brush-blue::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  top: 55%;
+  height: 65%;
+  background: #ffe6f0;
+  transform: rotate(-3deg);
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.brush-purple {
+  position: relative;
+  display: inline-block;
+}
+
+.brush-purple::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 110%;
+  height: 8px;
+  background: #ffe6f0;
+  border-radius: 20px;
+  transform: rotate(-3deg);
+}
+
+/* glow animation */
+.platform-left::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: white;
+  opacity: 0.08;
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+  filter: blur(120px);
+  animation: float 6s infinite alternate;
+}
+
+.hero-text-p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* RIGHT SIDE */
+.platform-right {
+  flex: 1;
+  background: #ffe6f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGIN CARD */
+.login-card {
+  width: 350px;
+  padding: 35px;
+  border: 2px solid black;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease;
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* INPUTS */
+.login-card input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-card input:focus {
+  border-color: #ff69b4;
+  box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.2);
+}
+
+/* BUTTON */
+.login-card button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff69b4, #972964);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+}
+
+/* ERROR */
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+/* GLOBAL BUTTON */
+button {
+  cursor: pointer;
+}

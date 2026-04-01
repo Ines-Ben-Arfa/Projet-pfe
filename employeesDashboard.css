@@ -1,0 +1,270 @@
+/* Page & header */
+.dashboard-page {
+  padding: 40px;
+  background: linear-gradient(120deg, #ffe6f0, #fff0f5);
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 30px;
+  color: #333;
+}
+
+/* Floating Add Button */
+.floating-addBtn {
+  background: #ff4da6;
+  color: white;
+  border: none;
+  font-size: 28px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 77, 166, 0.3);
+  transition: 0.3s;
+}
+
+.floating-addBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(255, 77, 166, 0.5);
+}
+
+/* Search bar */
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  font-size: 14px;
+}
+
+/* Employees grid with glassmorphism */
+.employees-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.employee-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.employee-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(255,77,166,0.3);
+}
+
+.employee-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.employee-top img.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffc0cb;
+}
+
+.employee-top h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.employee-top .country {
+  font-size: 13px;
+  color: #777;
+}
+
+.employee-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.employee-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.employee-actions button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.employee-actions .edit {
+  background: #ffc0cb;
+}
+
+.employee-actions .edit:hover {
+  background: #ffb0c5;
+}
+
+.employee-actions .delete {
+  background: #ff6b81;
+  color: white;
+}
+
+.employee-actions .delete:hover {
+  background: #ff4d6a;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.page-btn {
+  border: none;
+  background: #ff4da6;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.page-btn:disabled {
+  background: #ffc0cb;
+  cursor: default;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: #ff2d95;
+}
+
+/* Modal success popup animation */
+.modal-overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.3);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index: 100;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.success-popup {
+  background: #ffe6f0;
+  padding: 30px;
+  border-radius: 20px;
+  text-align:center;
+  box-shadow: 0 12px 30px rgba(255,77,166,0.4);
+  animation: popIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+@keyframes popIn {
+  0% {transform: scale(0.7);}
+  100% {transform: scale(1);}
+}
+
+/* SIDEBAR */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #1e1e2f, #2a2a40);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 15px;
+  gap: 10px;
+  box-shadow: 5px 0 20px rgba(0,0,0,0.2);
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.sidebar button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: #ccc;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.sidebar button:hover {
+  background: rgba(255, 105, 180, 0.2);
+  color: white;
+}
+
+.sidebar button.active {
+  background: linear-gradient(135deg, #ff69b4, #c2327f);
+  color: white;
+}
+
+.logout-btn {
+  margin-top: auto;
+  background: linear-gradient(135deg, #ff4d4d, #c0392b);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.logout-btn:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.tree-category {
+  cursor: pointer;
+}
